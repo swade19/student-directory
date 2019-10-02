@@ -21,18 +21,23 @@
 
      name = gets.chomp
      while !name.empty? do
-         students << {name: name, cohort: :november}
-         puts "Now we have  #{students.count} students"
+         students << {Name: name, Cohort: :November}
+         puts "Now we have #{students.count} students"
          name = gets.chomp
      end
 
 
-     students.each.with_index(1) do |value, index|
-       puts "#{index}: #{value}"
-     end
 
-     puts students
- end
+     students.each.with_index(1) do |hash| hash.each do | key, value|
+            if key.start_with?("A")
+              puts "#{key} #{value}"
+            end
+          end
+        end
+      end
 input_students
+
+
 #finally, we print the total number of students
 #it's important that print () doesn't add new line characters
+# Update: trying to just print out students with A names.
