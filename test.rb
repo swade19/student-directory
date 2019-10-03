@@ -9,7 +9,7 @@ healthy = {
   "Aorange" => "made_up"
 }
 
-
+#grep is tricky with hash.... dont go there yet .
 
 result = healthy.grep(/^A/)
 puts healthy.grep(/^A/)
@@ -24,4 +24,12 @@ healthy.each do |key, value|
     end
 
 
+end
+
+students.each do | key, value |
+
+    if key.start_with?("A")
+        puts "#{key} #{value}"
+      end
+    end
 end
